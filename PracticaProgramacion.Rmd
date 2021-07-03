@@ -1,0 +1,127 @@
+---
+title: "practica_programacion"
+author: "diego vilca torres"
+date: "3/7/2021"
+output: github_document
+---
+
+## Ejercicio 1
+
+```{r} 
+10000%%3
+```
+## Ejercicio 2
+
+```{r} 
+4560%%3
+#residuo = 0
+```
+## Ejercicio 3
+
+```{r} 
+vec<- c(2:87)
+b<-vec%%7
+b[b==0]
+# 12 numeros son divisibles por 7
+```
+## Ejercicio 4
+
+```{r} 
+v1 <- c(7:3)
+v2 <- c(seq(from=5, to=25, by=5))
+A <- ifelse(v1%%2==0, "TRUE", "FALSE")
+B <- ifelse(v2>10, "TRUE", "FALSE")
+data.frame(A,B)
+# se cumple A y B simultanamente en la posición 4
+```
+## Ejercicio 5
+
+```{r} 
+V <- (1:100)
+sum(1:100)
+sum_v<- (100*101)/2
+# resultado = 5050
+```
+## Ejercicio 6
+
+```{r} 
+vector5<- c(1, -4, 4, 9, -4)
+min(vector5)
+nivel<-c(1, -4, 4, 9, -4)
+nivel[2]
+nivel[5]
+ifelse(vector5==min(vector5), "VMIN", "---")
+```
+## Ejercicio 7
+
+```{r} 
+prod(1:8)
+#resultado = 40320
+```
+## Ejercicio 8
+
+```{r} 
+i<- 3:7
+sum(exp(i))
+#resultado = 1723.159
+```
+## Ejercicio 9
+
+```{r} 
+i<-1:10
+prod(log(sqrt(i)))
+#resultado = 0
+```
+## Ejercicio 10
+
+```{r} 
+a_segmento_circular<-function(R,r,ang){
+  A<-((r^2)/2)*((pi*ang/180)-sin(ang))
+  return(A)
+}
+a_segmento_circular (10,5,30)
+```
+## Ejercicio 11
+
+```{r} 
+a<- 1:10
+b<- 10:1
+vec_c<- c(21, 30, 22, 17, 18, 16)
+rev(vec_c)
+```
+## Ejercicio 12
+
+```{r} 
+i<- 10:100
+sum(i^3+ 4*i^2)
+#resultado = 26852735
+```
+## Ejercicio 13
+
+```{r} 
+i<- 1:25
+sum(2^i/i +3^i/i^2)
+# resultado = 2129170437
+```
+## Ejercicio 14
+
+```{r} 
+d.f<-mtcars
+#a
+d.f[d.f$mpg<18.0,]
+#b
+d.f[d.f$cyl==4,]
+#c
+d.f[d.f$wt>2.500&d.f$am==1,]
+```
+## Ejercicio 15
+
+```{r} 
+d.f<-mtcars
+#a
+d.f[d.f$mpg<18.0,]
+#b
+d.f[d.f$cyl==4,]
+#c
+d.f[d.f$wt>2.500&d.f$am==1,]
+```
